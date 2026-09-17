@@ -1,0 +1,14 @@
+#!/bin/sh
+# Preview the site on your own computer at http://127.0.0.1:4000/nupebbles/
+# Needs Ruby and Bundler (both come with Homebrew's ruby). First run is slow.
+#
+# Nothing here affects publishing: GitHub builds the site itself from the
+# source files when you push.
+set -e
+cd "$(dirname "$0")/.."
+export BUNDLE_PATH=vendor/bundle
+# Liquid (pinned by the github-pages gem) calls String#tainted?, which Ruby 3.2+
+# removed. GitHub's own Ruby is older, so this only matters for local preview.
+export RUBYOPT="-r$PWD/bin/ruby-compat.rb -W0"
+bundle install --quiet
+exec bundle exec jekyll serve --baseurl /nupebbles "$@"

@@ -1,0 +1,85 @@
+---
+layout: default
+---
+{%- comment -%}
+  THE shared privacy policy. Edit the wording here and every app's policy
+  changes at once. Bump privacy_effective_date in _config.yml when you do.
+
+  It reads the app's entry in _data/apps.yml (matched by the "app:" key in
+  the page's front matter) and uses these fields:
+    name, stores            — dropped into the text
+    makes_files             — includes "When information leaves your device"
+    has_reminders           — includes "Notifications"
+    collects_nothing        — must be true for this shared wording to be used.
+                              If false, everything between the header and
+                              "Changes to this policy" is replaced by whatever
+                              that app's privacy.md contains.
+  Say "your device", never "your iPhone", so the wording ports later.
+{%- endcomment -%}
+{%- comment -%} Guarded lookup: Jekyll's `where` returns EVERY app when the value is nil, so a page with no "app:" line must not silently get the first app. {%- endcomment -%}
+{%- assign app = nil -%}
+{%- if page.app -%}{%- assign app = site.data.apps | where: "key", page.app | first -%}{%- endif -%}
+{%- capture effective -%}Effective {{ site.privacy_effective_date | date: "%B %-d, %Y" }}{%- endcapture -%}
+
+{%- if app == nil -%}
+  {%- include app-missing.html -%}
+{%- else -%}
+
+{% include app-header.html app=app kind="Privacy Policy" meta=effective %}
+
+<article class="prose policy">
+
+{%- if app.collects_nothing %}
+
+  <p class="lead">{{ app.name }} collects no personal information of any kind. There is no account to create, no server it talks to, and no analytics running in the background. This page says what that means in practice.</p>
+
+  <h2 id="what-we-do-not-do">What we do not do</h2>
+  <ul>
+    <li>We collect no information about you. Not your name, not an email address, not a device identifier — nothing.</li>
+    <li>There are no accounts. There is nothing to sign up for and nothing to sign in to.</li>
+    <li>There is no analytics or tracking, no crash reporting, no advertising identifier, and no third-party software of any kind inside the app.</li>
+    <li>We share nothing and sell nothing, because we hold nothing.</li>
+    <li>The app makes no network requests. It works identically in airplane mode.</li>
+  </ul>
+
+  <h2 id="what-the-app-stores">What the app stores, and where</h2>
+  <p>Everything you enter — {{ app.stores }} — is saved in the app’s own private storage on your device. It is not transmitted anywhere.</p>
+  <p>If you back up your device, that data is included in the backup, as it is for any other app. Those are backups you have chosen to make, they are governed by your device manufacturer’s terms, and they are not something we can see or control.</p>
+
+  {%- if app.makes_files %}
+
+  <h2 id="when-information-leaves-your-device">When information leaves your device</h2>
+  <p>Only when you deliberately send it. {{ app.name }} can create a file from your data — such as a backup or a PDF — but only when you ask it to. The file is handed to your device’s own share sheet, and from there you decide what happens to it: where it is saved, whether it is printed, who it goes to. We never see it and never receive a copy.</p>
+  {%- endif %}
+
+  {%- if app.has_reminders %}
+
+  <h2 id="notifications">Notifications</h2>
+  <p>If you turn reminders on, they are scheduled locally by your device. There is no push notification server, and no token is registered with us or with anyone else. The reminder text never includes your entries, so nothing private appears on your lock screen.</p>
+  {%- endif %}
+
+  {%- comment -%} Anything written in the app's own privacy.md, below its front matter, appears here. {%- endcomment %}
+  {{ content }}
+
+  <h2 id="children">Children</h2>
+  <p>{{ app.name }} is suitable for all ages. It collects no information from anyone, of any age.</p>
+
+  <h2 id="your-rights">Your rights over your data</h2>
+  <p>Your data is already entirely in your hands. You can {% if app.makes_files %}export it or {% endif %}erase it from within the app at any time, and removing the app from your device removes everything it stored. There is no copy anywhere else for us to return to you, correct, or delete.</p>
+
+{%- else %}
+
+  {%- comment -%} collects_nothing is false: this app's privacy.md carries its own policy text. {%- endcomment %}
+  {{ content }}
+
+{%- endif %}
+
+  <h2 id="changes">Changes to this policy</h2>
+  <p>If this policy changes, the new version will be posted here with a new effective date. Any change that involved collecting information would be described on this page before it took effect.</p>
+
+  <h2 id="contact">Contact</h2>
+  <p>Questions about this policy, or about {{ app.name }}: <a href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>.</p>
+
+</article>
+
+{%- endif %}

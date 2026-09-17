@@ -1,0 +1,29 @@
+# One entry per app. This is the only file that has to change when an app is added.
+#
+# key            short lowercase name, no spaces; must match the folder apps/<key>/
+#                and the "app:" line in that folder's three pages
+# name           the name as it appears on the App Store
+# tagline        a few words, shown under the name
+# blurb          one sentence for the card on the landing page
+# app_store_url  leave empty until the app ships: the landing page shows
+#                "Coming soon". Fill it in and the card links to the App Store.
+# accent         the app's color, used only to tint its own card
+# stores         a plain-English list of what the app saves, dropped into the
+#                privacy policy sentence "Everything you enter — … — is saved …"
+# makes_files    true if the app can export a backup, a PDF, or any other file
+# has_reminders  true if the app schedules local notifications
+# collects_nothing  true means the shared privacy policy wording applies.
+#                Every app so far is true. If one ever isn't, set false and write
+#                that app's policy in its own privacy.md instead.
+
+- key: brighttend
+  name: BrightTend
+  tagline: Private Daily Check-In
+  blurb: One small thing, checked in each morning and recorded each evening.
+  app_store_url:
+  accent: "#2F6F5C"
+  stores: the actions you create, the answers you give each day, the notes you
+    write, and your settings
+  makes_files: true
+  has_reminders: true
+  collects_nothing: true

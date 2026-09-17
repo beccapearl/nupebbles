@@ -1,0 +1,392 @@
+/* NuPebbles — one stylesheet for every page.
+   No framework, no fonts fetched from anywhere, no JavaScript anywhere.
+   The pages must render with every external service down. */
+
+/* ---------- Palette & type ---------- */
+
+:root {
+  color-scheme: light dark;
+
+  --ground:        #faf7f2;   /* warm off-white */
+  --ground-raised: #fffdf9;   /* cards */
+  --ink:           #221d19;   /* near-black with a warm cast */
+  --ink-soft:      #5f564e;   /* secondary text */
+  --ink-faint:     #756b64;   /* metadata; still ≥ 4.5:1 on --ground */
+  --rule:          #e4dcd2;   /* hairlines */
+  --accent:        #9a5a3c;   /* clay: the one studio accent */
+  --accent-strong: #7e4830;
+  --error:         #a33a2a;
+
+  /* Set per card from apps.yml; nothing else may use it. */
+  --app-accent: var(--rule);
+
+  --font-text: "Iowan Old Style", "Palatino Linotype", Palatino, Charter, Georgia, "Times New Roman", serif;
+  --font-ui:   -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --measure: 42rem;   /* ~65–70 characters of serif body text */
+  --wide:    64rem;
+  --gutter:  1.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground:        #1b1816;
+    --ground-raised: #24201c;
+    --ink:           #ece5dc;
+    --ink-soft:      #b3a99e;
+    --ink-faint:     #948a80;
+    --rule:          #3a342e;
+    --accent:        #d99a78;
+    --accent-strong: #e8b598;
+    --error:         #e0705c;
+  }
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  font-size: 106.25%;               /* 17px */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (min-width: 40em) {
+  html { font-size: 112.5%; }       /* 18px once there is room */
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-text);
+  line-height: 1.65;
+  font-feature-settings: "kern", "liga";
+}
+
+main { flex: 1 0 auto; }
+
+.wrap {
+  width: 100%;
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover { color: var(--accent-strong); text-decoration-thickness: 2px; }
+
+a:focus-visible,
+.skip-link:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--rule);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--gutter);
+  top: -3rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--ground-raised);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+}
+.skip-link:focus { top: 0.5rem; z-index: 10; }
+
+.sep { color: var(--ink-faint); margin-inline: 0.35em; }
+
+/* ---------- Site header & footer ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-ui);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  min-height: 3.25rem;
+}
+
+.brand {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.brand:hover { color: var(--accent); }
+
+.site-footer {
+  margin-top: 5rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
+.site-footer .wrap { padding-block: 1.5rem; }
+.site-footer p { margin: 0; }
+.site-footer a { color: inherit; }
+.site-footer a:hover { color: var(--accent); }
+
+/* ---------- Page headers ---------- */
+
+.page-header {
+  padding-top: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.page-header--home { margin-bottom: 3rem; }
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.eyebrow .sep { margin-inline: 0.5em; }
+
+h1 {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: clamp(2rem, 1.4rem + 2.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+.meta {
+  margin: 0.75rem 0 0;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--ink-faint);
+}
+
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.page-header .lead { margin: 1rem 0 0; }
+
+/* Tabs to an app's three pages */
+.app-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.5rem;
+  margin-top: 1.75rem;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.app-nav a {
+  padding: 0.5rem 0 0.6rem;
+  margin-bottom: -1px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.app-nav a:hover { color: var(--ink); }
+
+.app-nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Prose ---------- */
+
+.prose { max-width: var(--measure); }
+
+.prose h2 {
+  margin: 2.5rem 0 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 1.3rem;
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.prose h3 {
+  margin: 2rem 0 0.5rem;
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.prose p,
+.prose ul,
+.prose ol { margin: 0 0 1.1rem; }
+
+.prose ul,
+.prose ol { padding-left: 1.4rem; }
+
+.prose li { margin-bottom: 0.5rem; }
+.prose li::marker { color: var(--ink-faint); }
+
+.prose strong { font-weight: 650; }
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+/* The policy is the page people squint at: a touch more air. */
+.policy p { line-height: 1.7; }
+.policy > .lead { margin-bottom: 2rem; }
+
+/* FAQ: questions read as questions, answers hang beneath. */
+.faq h2 {
+  margin-top: 2.25rem;
+  font-size: 1.15rem;
+}
+.faq h2 + p { margin-top: 0; }
+
+/* Notices (only used for setup mistakes) */
+.notice {
+  margin: 3rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--error);
+  background: var(--ground-raised);
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+}
+.notice p { margin: 0 0 0.5rem; }
+.notice p:last-child { margin-bottom: 0; }
+
+/* ---------- Landing page ---------- */
+
+.apps { margin-bottom: 4rem; }
+
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--ground-raised);
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--app-accent);   /* the app's own colour, here only */
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card__body {
+  flex: 1 0 auto;
+  padding: 1.25rem 1.35rem 0.5rem;
+}
+
+.card__name {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.card__tagline {
+  margin: 0.15rem 0 0.9rem;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+}
+
+.card__blurb {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.card__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding: 0.9rem 1.35rem 1.1rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+}
+
+.card__store {
+  font-weight: 600;
+  text-decoration: none;
+}
+.card__store:hover { text-decoration: underline; }
+
+.card__soon {
+  color: var(--ink-faint);
+  font-weight: 500;
+}
+
+.card__links { display: flex; gap: 1rem; }
+
+.card__links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.card__links a:hover { color: var(--accent); text-decoration: underline; }
+
+.contact { max-width: var(--measure); }
+.contact h2 { margin-top: 0; }
+
+/* The landing page (front matter `wide: true`) gets room for the card grid;
+   header and footer follow so everything shares one left edge. */
+.wide .wrap { max-width: calc(var(--wide) + 2 * var(--gutter)); }
+
+/* ---------- Print ---------- */
+
+@media print {
+  :root { --ground: #fff; --ground-raised: #fff; --ink: #000; --ink-soft: #222; --ink-faint: #444; --accent: #000; }
+  .site-header, .site-footer, .app-nav, .skip-link { display: none; }
+  body { font-size: 11pt; }
+  a { text-decoration: none; }
+}

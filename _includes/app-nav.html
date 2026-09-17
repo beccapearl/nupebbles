@@ -1,0 +1,21 @@
+{%- comment -%}
+  Tabs linking an app's three pages. Pass the app entry: {% include app-nav.html app=app %}
+  Pages are found by the "app:" and "layout:" values in their front matter, so a
+  link only appears when that page actually exists, and always points at its
+  real permalink.
+{%- endcomment -%}
+{%- assign app_pages = site.pages | where: "app", include.app.key -%}
+{%- assign privacy_page = app_pages | where: "layout", "privacy" | first -%}
+{%- assign support_page = app_pages | where: "layout", "support" | first -%}
+{%- assign faq_page = app_pages | where: "layout", "faq" | first -%}
+<nav class="app-nav" aria-label="{{ include.app.name }} pages">
+  {%- if privacy_page %}
+  <a href="{{ privacy_page.url | relative_url }}"{% if page.url == privacy_page.url %} aria-current="page"{% endif %}>Privacy</a>
+  {%- endif %}
+  {%- if support_page %}
+  <a href="{{ support_page.url | relative_url }}"{% if page.url == support_page.url %} aria-current="page"{% endif %}>Support</a>
+  {%- endif %}
+  {%- if faq_page %}
+  <a href="{{ faq_page.url | relative_url }}"{% if page.url == faq_page.url %} aria-current="page"{% endif %}>FAQ</a>
+  {%- endif %}
+</nav>

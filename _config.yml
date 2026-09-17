@@ -1,0 +1,40 @@
+# NuPebbles studio site — settings shared by every page.
+# Anything changed here changes every app's pages at once.
+
+title: NuPebbles
+description: Small, focused apps that do one thing and keep your data on your device.
+support_email: support@nupebbles.com
+
+# The date shown on every app's privacy policy.
+# Change it here whenever the shared policy wording in _layouts/privacy.html changes.
+privacy_effective_date: 2026-09-16
+
+# Where the site lives — deliberately NOT set here.
+#
+# GitHub Pages fills in `url` and `baseurl` itself from the repository:
+#   https://<username>.github.io/nupebbles/   →  baseurl "/nupebbles"
+#   https://nupebbles.com/ (custom domain)      →  baseurl ""
+# Every link on the site is built from that value, so connecting the custom
+# domain later needs no change to any file. Do not add a `baseurl:` line.
+
+# Plain Jekyll, no plugins beyond what GitHub Pages runs automatically.
+# "theme: null" stops GitHub Pages from quietly adding its default theme and
+# its stylesheet; every page here uses our own layouts and assets/css/main.css.
+theme: null
+markdown: kramdown
+
+# URLs come from where a file sits: apps/<key>/privacy.md → /apps/<key>/privacy/
+# No page needs (or should have) a permalink line of its own.
+permalink: pretty
+kramdown:
+  input: GFM
+
+# Files that are part of the repository but not part of the website.
+exclude:
+  - README.md
+  - bin
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .jekyll-cache

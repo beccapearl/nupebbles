@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{%- comment -%}
+  Support page for one app: shared contact block around that app's own help
+  content (whatever is written in its support.md below the front matter).
+{%- endcomment -%}
+{%- comment -%} Guarded lookup: Jekyll's `where` returns EVERY app when the value is nil, so a page with no "app:" line must not silently get the first app. {%- endcomment -%}
+{%- assign app = nil -%}
+{%- if page.app -%}{%- assign app = site.data.apps | where: "key", page.app | first -%}{%- endif -%}
+
+{%- if app == nil -%}
+  {%- include app-missing.html -%}
+{%- else -%}
+
+{% include app-header.html app=app kind="Support" %}
+
+<article class="prose">
+
+  <p class="lead">Help with {{ app.name }} is below. If your question isn’t answered here, email <a href="mailto:{{ site.support_email }}">{{ site.support_email }}</a> and a person will reply.</p>
+
+  {{ content }}
+
+  <h2 id="contact">Contact</h2>
+  <p>Email <a href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>. It helps to say which device you are using and what you expected to happen.</p>
+  <p>Because {{ app.name }} keeps everything on your device and sends nothing to us, we cannot see your entries or recover them for you — if a question is about something you wrote, please describe it in the message.</p>
+
+</article>
+
+{%- endif %}

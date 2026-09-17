@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{%- comment -%}
+  FAQ page for one app. The page's own faq.md holds the questions and answers:
+  each question is a "## " heading, each answer the paragraphs beneath it.
+{%- endcomment -%}
+{%- comment -%} Guarded lookup: Jekyll's `where` returns EVERY app when the value is nil, so a page with no "app:" line must not silently get the first app. {%- endcomment -%}
+{%- assign app = nil -%}
+{%- if page.app -%}{%- assign app = site.data.apps | where: "key", page.app | first -%}{%- endif -%}
+
+{%- if app == nil -%}
+  {%- include app-missing.html -%}
+{%- else -%}
+
+{% include app-header.html app=app kind="Frequently Asked Questions" %}
+
+<article class="prose faq">
+
+  {{ content }}
+
+  <h2 id="contact">Something else?</h2>
+  <p>Email <a href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>.</p>
+
+</article>
+
+{%- endif %}

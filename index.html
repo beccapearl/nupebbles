@@ -1,0 +1,44 @@
+---
+layout: default
+wide: true
+---
+<header class="page-header page-header--home">
+  <h1>{{ site.title }}</h1>
+  <p class="lead">{{ site.description }}</p>
+</header>
+
+<section class="apps" aria-labelledby="apps-heading">
+  <h2 id="apps-heading" class="visually-hidden">Apps</h2>
+  <ul class="cards">
+  {%- for app in site.data.apps %}
+    {%- assign app_pages = site.pages | where: "app", app.key %}
+    {%- assign privacy_page = app_pages | where: "layout", "privacy" | first %}
+    {%- assign support_page = app_pages | where: "layout", "support" | first %}
+    {%- assign faq_page = app_pages | where: "layout", "faq" | first %}
+    <li class="card" style="--app-accent: {{ app.accent | default: 'var(--rule)' }};">
+      <div class="card__body">
+        <h3 class="card__name">{{ app.name }}</h3>
+        <p class="card__tagline">{{ app.tagline }}</p>
+        <p class="card__blurb">{{ app.blurb }}</p>
+      </div>
+      <div class="card__foot">
+        {%- if app.app_store_url and app.app_store_url != "" %}
+        <a class="card__store" href="{{ app.app_store_url }}">View on the App&nbsp;Store</a>
+        {%- else %}
+        <span class="card__soon">Coming soon</span>
+        {%- endif %}
+        <nav class="card__links" aria-label="{{ app.name }} pages">
+          {%- if privacy_page %}<a href="{{ privacy_page.url | relative_url }}">Privacy</a>{% endif %}
+          {%- if support_page %}<a href="{{ support_page.url | relative_url }}">Support</a>{% endif %}
+          {%- if faq_page %}<a href="{{ faq_page.url | relative_url }}">FAQ</a>{% endif %}
+        </nav>
+      </div>
+    </li>
+  {%- endfor %}
+  </ul>
+</section>
+
+<section class="prose contact" aria-labelledby="contact-heading">
+  <h2 id="contact-heading">Contact</h2>
+  <p>Questions about any of these apps: <a href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>.</p>
+</section>

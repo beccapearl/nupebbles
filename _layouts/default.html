@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- assign app = nil -%}
+  {%- if page.app %}{% assign app = site.data.apps | where: "key", page.app | first %}{% endif %}
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{% if app %}{{ app.name }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif app %}{{ app.name }} — {{ app.tagline }}. {{ page.title }} from {{ site.title }}.{% else %}{{ site.description }}{% endif %}">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='17' rx='13' ry='11' fill='%239a5a3c'/%3E%3C/svg%3E">
+  {%- if site.url %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {%- endif %}
+</head>
+<body{% if page.wide %} class="wide"{% endif %}>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="mailto:{{ site.support_email }}">{{ site.support_email }}</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
