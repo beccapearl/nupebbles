@@ -1,14 +1,14 @@
 {%- comment -%}
   Shown instead of a page when its "app:" key is missing or has no entry in
-  _data/apps.yml. Better a loud message than a silently wrong legal page.
+  _data/apps/. Better a loud message than a silently wrong legal page.
 {%- endcomment -%}
 <div class="notice notice--error" role="alert">
   <p><strong>This page is not set up yet.</strong></p>
   {%- if page.app %}
   <p>Its front matter says <code>app: {{ page.app }}</code>, but there is no entry with
-  <code>key: {{ page.app }}</code> in <code>_data/apps.yml</code>. Add one, or fix the key.</p>
+  <code>_data/apps/{{ page.app }}.yml</code>. Add that file, or fix the key.</p>
   {%- else %}
   <p>Its front matter has no <code>app:</code> line, so there is no way to know which
-  app it belongs to. Add <code>app: &lt;key&gt;</code> using a key from <code>_data/apps.yml</code>.</p>
+  app it belongs to. Add <code>app: &lt;key&gt;</code> using a filename from <code>_data/apps/</code>.</p>
   {%- endif %}
 </div>

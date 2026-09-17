@@ -1,0 +1,15 @@
+# The filename is this app's key. It must match apps/brightwren/ and the
+# "app:" value in that folder's privacy, support, and FAQ pages.
+key: brightwren
+name: BrightWren
+tagline: Spelling Practice
+blurb: Calm spelling practice with spoken words, custom lists, assessments, and printable learning records.
+ios_store_url:
+android_store_url:
+accent: "#2C7A7B"
+stores: profile names and optional grade levels, custom word lists, practice
+  and assessment history, saved records, and settings
+makes_files: true
+has_reminders: false
+has_purchases: true
+collects_nothing: true

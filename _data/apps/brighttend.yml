@@ -1,0 +1,15 @@
+# The filename is this app's key. It must match apps/brighttend/ and the
+# "app:" value in that folder's privacy, support, and FAQ pages.
+key: brighttend
+name: BrightTend
+tagline: Private Daily Check-In
+blurb: Gentle daily check-ins for the actions that matter, with notes, history, reminders, and printable records.
+ios_store_url:
+android_store_url:
+accent: "#2F6F5C"
+stores: the actions you create, the answers you give each day, the notes you
+  write, and your settings
+makes_files: true
+has_reminders: true
+has_purchases: true
+collects_nothing: true

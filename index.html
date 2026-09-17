@@ -10,7 +10,8 @@ wide: true
 <section class="apps" aria-labelledby="apps-heading">
   <h2 id="apps-heading" class="visually-hidden">Apps</h2>
   <ul class="cards">
-  {%- for app in site.data.apps %}
+  {%- for app_file in site.data.apps %}
+    {%- assign app = app_file[1] %}
     {%- assign app_pages = site.pages | where: "app", app.key %}
     {%- assign privacy_page = app_pages | where: "layout", "privacy" | first %}
     {%- assign support_page = app_pages | where: "layout", "support" | first %}
@@ -22,10 +23,16 @@ wide: true
         <p class="card__blurb">{{ app.blurb }}</p>
       </div>
       <div class="card__foot">
-        {%- if app.app_store_url and app.app_store_url != "" %}
-        <a class="card__store" href="{{ app.app_store_url }}">View on the App&nbsp;Store</a>
-        {%- else %}
+        {%- if app.ios_store_url and app.ios_store_url != "" %}
+        <a class="card__store" href="{{ app.ios_store_url }}">App&nbsp;Store</a>
+        {%- endif %}
+        {%- if app.android_store_url and app.android_store_url != "" %}
+        <a class="card__store" href="{{ app.android_store_url }}">Google&nbsp;Play</a>
+        {%- endif %}
+        {%- if app.ios_store_url == nil or app.ios_store_url == "" %}
+          {%- if app.android_store_url == nil or app.android_store_url == "" %}
         <span class="card__soon">Coming soon</span>
+          {%- endif %}
         {%- endif %}
         <nav class="card__links" aria-label="{{ app.name }} pages">
           {%- if privacy_page %}<a href="{{ privacy_page.url | relative_url }}">Privacy</a>{% endif %}

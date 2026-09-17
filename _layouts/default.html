@@ -4,7 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- assign app = nil -%}
-  {%- if page.app %}{% assign app = site.data.apps | where: "key", page.app | first %}{% endif %}
+  {%- if page.app -%}
+    {%- for app_file in site.data.apps -%}
+      {%- assign candidate = app_file[1] -%}
+      {%- if candidate.key == page.app -%}{%- assign app = candidate -%}{%- break -%}{%- endif -%}
+    {%- endfor -%}
+  {%- endif %}
   <title>{% if page.title %}{{ page.title }} · {% endif %}{% if app %}{{ app.name }} · {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif app %}{{ app.name }} — {{ app.tagline }}. {{ page.title }} from {{ site.title }}.{% else %}{{ site.description }}{% endif %}">
   <meta name="color-scheme" content="light dark">

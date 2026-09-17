@@ -5,20 +5,25 @@ layout: default
   THE shared privacy policy. Edit the wording here and every app's policy
   changes at once. Bump privacy_effective_date in _config.yml when you do.
 
-  It reads the app's entry in _data/apps.yml (matched by the "app:" key in
-  the page's front matter) and uses these fields:
+  It reads the app's file in _data/apps/ (matched by the "app:" key in the
+  page's front matter) and uses these fields:
     name, stores            — dropped into the text
     makes_files             — includes "When information leaves your device"
     has_reminders           — includes "Notifications"
+    has_purchases           — includes the app-marketplace purchase section
     collects_nothing        — must be true for this shared wording to be used.
                               If false, everything between the header and
                               "Changes to this policy" is replaced by whatever
                               that app's privacy.md contains.
-  Say "your device", never "your iPhone", so the wording ports later.
+  Keep shared wording platform-neutral so the same policy works everywhere.
 {%- endcomment -%}
 {%- comment -%} Guarded lookup: Jekyll's `where` returns EVERY app when the value is nil, so a page with no "app:" line must not silently get the first app. {%- endcomment -%}
-{%- assign app = nil -%}
-{%- if page.app -%}{%- assign app = site.data.apps | where: "key", page.app | first -%}{%- endif -%}
+{%- if page.app -%}
+  {%- for app_file in site.data.apps -%}
+    {%- assign candidate = app_file[1] -%}
+    {%- if candidate.key == page.app -%}{%- assign app = candidate -%}{%- break -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
 {%- capture effective -%}Effective {{ site.privacy_effective_date | date: "%B %-d, %Y" }}{%- endcapture -%}
 
 {%- if app == nil -%}
@@ -31,20 +36,30 @@ layout: default
 
 {%- if app.collects_nothing %}
 
-  <p class="lead">{{ app.name }} collects no personal information of any kind. There is no account to create, no server it talks to, and no analytics running in the background. This page says what that means in practice.</p>
+  <p class="lead">{{ app.name }} does not collect or upload the information you put into the app. There is no {{ app.name }} account, no developer-operated data server, and no analytics running in the background. This page explains what that means in practice.</p>
 
   <h2 id="what-we-do-not-do">What we do not do</h2>
   <ul>
-    <li>We collect no information about you. Not your name, not an email address, not a device identifier — nothing.</li>
+    <li>We do not receive your name, email address, entries, activity, or device identifier from the app.</li>
     <li>There are no accounts. There is nothing to sign up for and nothing to sign in to.</li>
-    <li>There is no analytics or tracking, no crash reporting, no advertising identifier, and no third-party software of any kind inside the app.</li>
-    <li>We share nothing and sell nothing, because we hold nothing.</li>
-    <li>The app makes no network requests. It works identically in airplane mode.</li>
+    <li>There is no analytics or tracking, no developer-operated crash reporting, no advertising identifier, and no advertising or tracking software inside the app.</li>
+    <li>We do not sell or share your app content. We cannot, because we never receive it.</li>
   </ul>
 
   <h2 id="what-the-app-stores">What the app stores, and where</h2>
   <p>Everything you enter — {{ app.stores }} — is saved in the app’s own private storage on your device. It is not transmitted anywhere.</p>
   <p>If you back up your device, that data is included in the backup, as it is for any other app. Those are backups you have chosen to make, they are governed by your device manufacturer’s terms, and they are not something we can see or control.</p>
+
+  {%- if app.has_purchases %}
+
+  <h2 id="marketplace-purchases">App marketplace purchases</h2>
+  <p>{{ app.name }} uses your device’s app marketplace to check, buy, or restore its one-time purchase. The marketplace provider processes payment and account information under its own privacy policy. The app receives only the transaction and entitlement information it needs to decide whether purchased features are available; it does not attach your entries or activity to that request, and NuPebbles does not receive your payment details.</p>
+  <p>Buying or restoring the purchase requires a connection to the app marketplace. The app’s private content remains on your device, and its everyday features do not depend on a NuPebbles account or server.</p>
+  {%- else %}
+
+  <h2 id="network-use">Network use</h2>
+  <p>{{ app.name }} does not send your entries or activity to us or to a developer-operated server.</p>
+  {%- endif %}
 
   {%- if app.makes_files %}
 
@@ -62,10 +77,10 @@ layout: default
   {{ content }}
 
   <h2 id="children">Children</h2>
-  <p>{{ app.name }} is suitable for all ages. It collects no information from anyone, of any age.</p>
+  <p>{{ app.name }} may be used by people of different ages. Because the app does not collect personal information, it does not collect personal information from children.</p>
 
   <h2 id="your-rights">Your rights over your data</h2>
-  <p>Your data is already entirely in your hands. You can {% if app.makes_files %}export it or {% endif %}erase it from within the app at any time, and removing the app from your device removes everything it stored. There is no copy anywhere else for us to return to you, correct, or delete.</p>
+  <p>Your app data is already in your hands. You can {% if app.makes_files %}export it or {% endif %}erase it from within the app at any time. Removing the app removes its local data from your device; any device backup you chose to make remains subject to your device and backup provider’s controls. NuPebbles has no server copy to return, correct, or delete.</p>
 
 {%- else %}
 
@@ -73,6 +88,9 @@ layout: default
   {{ content }}
 
 {%- endif %}
+
+  <h2 id="website-and-email">This website and support email</h2>
+  <p>This website is separate from the apps and does not use analytics, advertising, or tracking scripts. If you choose to email us, your email address and whatever you include in the message are sent through the email providers involved in delivery. We use that information only to answer you and do not sell it. Please do not include private app entries unless they are necessary to explain your question.</p>
 
   <h2 id="changes">Changes to this policy</h2>
   <p>If this policy changes, the new version will be posted here with a new effective date. Any change that involved collecting information would be described on this page before it took effect.</p>

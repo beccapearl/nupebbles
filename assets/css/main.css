@@ -17,7 +17,7 @@
   --accent-strong: #7e4830;
   --error:         #a33a2a;
 
-  /* Set per card from apps.yml; nothing else may use it. */
+  /* Set per card from _data/apps/<key>.yml; nothing else may use it. */
   --app-accent: var(--rule);
 
   --font-text: "Iowan Old Style", "Palatino Linotype", Palatino, Charter, Georgia, "Times New Roman", serif;

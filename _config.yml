@@ -2,12 +2,12 @@
 # Anything changed here changes every app's pages at once.
 
 title: NuPebbles
-description: Small, focused apps that do one thing and keep your data on your device.
+description: Thoughtful apps for everyday life and learning, designed to keep your information on your device.
 support_email: support@nupebbles.com
 
 # The date shown on every app's privacy policy.
 # Change it here whenever the shared policy wording in _layouts/privacy.html changes.
-privacy_effective_date: 2026-09-16
+privacy_effective_date: 2026-09-17
 
 # Where the site lives — deliberately NOT set here.
 #

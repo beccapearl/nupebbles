@@ -1,0 +1,15 @@
+# The filename is this app's key. It must match apps/brightcrab/ and the
+# "app:" value in that folder's privacy, support, and FAQ pages.
+key: brightcrab
+name: BrightCrab
+tagline: Your whole move, organized
+blurb: A calm moving companion for checklists, boxes, budgets, notes, contacts, and move records.
+ios_store_url:
+android_store_url:
+accent: "#DE3F18"
+stores: your move details, checklist tasks, boxes and photos, budget items,
+  notes, contacts, archived moves, and settings
+makes_files: true
+has_reminders: true
+has_purchases: true
+collects_nothing: true
