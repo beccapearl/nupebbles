@@ -26,10 +26,10 @@ In the morning check-in, **Record now instead** lets you answer straight away ra
 
 On the old phone, go to **Settings → Your data → Save a backup** and keep the file somewhere you can reach from the new phone.
 
-On the new phone, tap **I have a backup** on the first screen, or use **Restore from a backup** in **Settings → Your data**. BrightTend checks that the file is a valid backup before it changes anything, so a wrong file can't damage what's already there.
+On the new phone, tap **Restore a backup** on the first screen, or use **Restore from a backup** in **Settings → Your data**. BrightTend checks that the file is a valid backup before it changes anything, so a wrong file can't damage what's already there.
 
 ## Reminders and text size
 
-Reminders are off until you turn them on. The evening reminder arrives at your evening hour.
+The evening reminder starts on and arrives at your evening hour. The morning reminder starts off. You can turn either reminder on or off in Settings.
 
 BrightTend offers five text sizes of its own, applied on top of your device's text size setting — so if the system size is already right for you, you can still make BrightTend a little larger or smaller.
