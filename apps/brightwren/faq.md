@@ -6,13 +6,7 @@ title: FAQ
 
 ## Is this a full spelling curriculum?
 
-No, and we would rather say so plainly than have you find out after buying.
-
-BrightWren holds 47 lists and 540 words. A conventional spelling program covers several hundred words in a single school year. BrightWren is designed as steady practice with a record you can keep — many families use it as their main spelling work, but if you need several hundred new words a year, plan to use it alongside another source.
-
-## How does BrightWren work?
-
-BrightWren speaks a word, you spell it with the app’s letter keyboard, and the correct spelling appears right away. After a miss, you can type it again, write its sentence on paper and check it, or continue with spelling only.
+No, BrightWren holds 47 lists and 540 words. A conventional spelling program covers several hundred words in a single school year. BrightWren is designed as steady practice with a record you can keep — many families use it as their main spelling work, but if you need several hundred new words a year, plan to use it alongside another source.
 
 ## Why does the app ask me to write sentences on paper?
 
@@ -29,10 +23,6 @@ Yes, with the full version. Create a custom list by typing words or choosing wor
 ## How do assessments work?
 
 Open **Progress → Assessments**, choose an available list, and record a formal spelling check. Assessment history stays with the active profile.
-
-## How do portfolio reports work?
-
-From **Progress**, open **Portfolio report** and choose what to include. The report is created on your device, then you choose whether to print, save, or share it. The free version includes a Sample watermark; the full version removes it.
 
 ## The speaking voice is hard to understand. Can I improve it?
 
