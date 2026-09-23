@@ -4,7 +4,7 @@ key: brighttend
 name: BrightTend
 tagline: Private Daily Check-In
 blurb: Gentle daily check-ins for the actions that matter, with notes, history, reminders, and printable records.
-ios_store_url:
+ios_store_url: https://apps.apple.com/us/app/brighttend-daily-check-in/id6811962564
 android_store_url:
 accent: "#2F6F5C"
 stores: the actions you create, the answers you give each day, the notes you
