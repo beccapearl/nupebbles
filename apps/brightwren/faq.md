@@ -4,7 +4,13 @@ app: brightwren
 title: FAQ
 ---
 
-## How does BrightWren teach spelling?
+## Is this a full spelling curriculum?
+
+No, and we would rather say so plainly than have you find out after buying.
+
+BrightWren holds 47 lists and 540 words. A conventional spelling program covers several hundred words in a single school year. BrightWren is designed as steady practice with a record you can keep — many families use it as their main spelling work, but if you need several hundred new words a year, plan to use it alongside another source.
+
+## How does BrightWren work?
 
 BrightWren speaks a word, you spell it with the app’s letter keyboard, and the correct spelling appears right away. After a miss, you can type it again, write its sentence on paper and check it, or continue with spelling only.
 
@@ -15,10 +21,6 @@ Writing a dictated sentence gives learners a way to practice the word in context
 ## What is Words to Meet Again?
 
 When a word is missed, it is added to **Words to Meet Again**. The learner can practice those words at any time. A word stays there until it is spelled correctly; BrightWren does not put words on a timed review schedule.
-
-## Can more than one person use the app?
-
-Yes. The free version includes one profile. The full version supports up to ten profiles on one device, each with separate lists, practice, assessments, records, and settings.
 
 ## Can I practice a school spelling list?
 
@@ -31,10 +33,6 @@ Open **Progress → Assessments**, choose an available list, and record a formal
 ## How do portfolio reports work?
 
 From **Progress**, open **Portfolio report** and choose what to include. The report is created on your device, then you choose whether to print, save, or share it. The free version includes a Sample watermark; the full version removes it.
-
-## How do I keep records before moving to a new device?
-
-Use **Settings → Records → Save a copy of the record** and save the file somewhere the new device can reach. The file preserves profiles, dated practice and assessment records, and saved reports. It does not preserve every in-progress lesson state.
 
 ## The speaking voice is hard to understand. Can I improve it?
 
@@ -50,7 +48,29 @@ BrightWren has no BrightWren account, ads, tracking, or third-party analytics. L
 
 ## What happens if I delete the app?
 
-Deleting the app removes the profiles, learning state, and records stored inside it. Save a BrightWren record copy first if you need the dated record on another device.
+BrightWren keeps everything on your device and nowhere else. There is no account and no cloud backup, which is why we collect nothing about you. It also means deleting the app deletes your record permanently, and we cannot restore it.
+
+Use Settings → Keep a copy in Files from time to time, especially at the end of a term, and before deleting the app or moving to a new device.
+
+## How do I move everything to a new device?
+
+On the old device: Settings → Keep a copy in Files, and save the file somewhere you can reach it again. On the new one: Settings → Restore from a copy, and choose that file.
+
+Restoring adds the learners from the file. It never overwrites or removes anything already on the device — so if you restore the same file twice, you will see each learner twice. Delete the extra profile to put it right.
+
+## I paid but the full version isn't showing.
+
+Settings → Full version → Restore purchases. If you bought it with a different Apple Account, or someone else in your Family Sharing group bought it, make sure the device is signed into the right one.
+
+## Can I get a refund?
+
+Refunds are handled by Apple, not by us. Visit [Apple Support](https://support.apple.com/en-us/106932?choose-your-country-or-region=united-states), request a refund, sign in, and find BrightWren in your purchase history.
+
+## Are the words and sentences checked?
+
+Yes. Every list and sentence in BrightWren was written and reviewed for American English spelling, punctuation, and usage before it shipped. BrightWren is spelling practice rather than a curriculum, and it does not replace your judgment about what your learner needs next.
+
+If you find a word or sentence you think is incorrect, please let us know at [support@nupebbles.com](mailto:support@nupebbles.com). 
 
 ## Is there a subscription?
 
