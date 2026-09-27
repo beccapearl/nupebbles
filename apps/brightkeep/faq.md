@@ -1,0 +1,25 @@
+---
+layout: faq
+app: brightkeep
+title: FAQ
+---
+
+## Is there a subscription?
+
+No. BrightKeep is free to use, and one optional payment unlocks the extras for good.
+
+## What's free?
+
+Unlimited rooms and tasks, all six color themes, and the full daily list.
+
+## Do I need an account?
+
+No. Everything stays on your phone.
+
+## Is BrightKeep on Android?
+
+Not yet. It's coming to iPhone first.
+
+## When is it coming out?
+
+Soon. This page will link to the App Store when it's ready.
