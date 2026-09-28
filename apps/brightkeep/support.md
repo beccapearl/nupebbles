@@ -18,6 +18,8 @@ That's fine. Anything you missed waits quietly in **Still to do** until it's don
 
 Pick the rooms, choose who's helping, and start the timer. Everyone checks off tasks on one shared list.
 
+To give each person their own tasks, see [the FAQ](../faq/#how-do-i-give-each-person-their-own-tasks).
+
 **Quick clean** and helpers are part of the one-time unlock.
 
 ## Reminders
