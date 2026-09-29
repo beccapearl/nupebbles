@@ -12,7 +12,7 @@ Pick the rooms in your house, then add tasks to each one with a simple schedule:
 
 ## Missed a day?
 
-That's fine. Anything you missed waits quietly in **Still to do** until it's done or its next date comes around. Nothing piles up.
+That's fine. Anything you missed stays on your list, marked with the day it was due, until it's done or its next date comes around. Nothing piles up.
 
 ## Quick clean and helpers
 
