@@ -12,3 +12,5 @@ makes_files: true
 has_reminders: true
 has_purchases: true
 collects_nothing: true
+export_needs_unlock: true
+privacy_effective_date: 2026-10-01

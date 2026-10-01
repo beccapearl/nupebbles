@@ -11,6 +11,10 @@ layout: default
     makes_files             — includes "When information leaves your device"
     has_reminders           — includes "Notifications"
     has_purchases           — includes the app-marketplace purchase section
+    export_needs_unlock     — optional: says saving a copy needs the one-time
+                              unlock, instead of "export it or erase it"
+    privacy_effective_date  — optional: this app's own effective date,
+                              overriding the one in _config.yml
     collects_nothing        — must be true for this shared wording to be used.
                               If false, everything between the header and
                               "Changes to this policy" is replaced by whatever
@@ -24,7 +28,7 @@ layout: default
     {%- if candidate.key == page.app -%}{%- assign app = candidate -%}{%- break -%}{%- endif -%}
   {%- endfor -%}
 {%- endif -%}
-{%- capture effective -%}Effective {{ site.privacy_effective_date | date: "%B %-d, %Y" }}{%- endcapture -%}
+{%- capture effective -%}Effective {{ app.privacy_effective_date | default: site.privacy_effective_date | date: "%B %-d, %Y" }}{%- endcapture -%}
 
 {%- if app == nil -%}
   {%- include app-missing.html -%}
@@ -80,7 +84,7 @@ layout: default
   <p>{{ app.name }} may be used by people of different ages. Because the app does not collect personal information, it does not collect personal information from children.</p>
 
   <h2 id="your-rights">Your rights over your data</h2>
-  <p>Your app data is already in your hands. You can {% if app.makes_files %}export it or {% endif %}erase it from within the app at any time. Removing the app removes its local data from your device; any device backup you chose to make remains subject to your device and backup provider’s controls. NuPebbles has no server copy to return, correct, or delete.</p>
+  <p>Your app data is already in your hands. {% if app.export_needs_unlock %}You can erase it from within the app at any time. With the one-time unlock, you can also save a copy through your device’s share sheet.{% else %}You can {% if app.makes_files %}export it or {% endif %}erase it from within the app at any time.{% endif %} Removing the app removes its local data from your device; any device backup you chose to make remains subject to your device and backup provider’s controls. NuPebbles has no server copy to return, correct, or delete.</p>
 
 {%- else %}
 
