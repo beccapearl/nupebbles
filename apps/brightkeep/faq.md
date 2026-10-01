@@ -19,11 +19,3 @@ No. Everything stays on your phone.
 ## How do I give each person their own tasks?
 
 Unlock the extras, then go to **Settings** > **Helpers** > **Assign tasks**. Tap a person, then check their tasks. When you start a Quick clean, pick **Use assignments** so everyone sees their own list.
-
-## Is BrightKeep on Android?
-
-Not yet. It's coming to iPhone first.
-
-## When is it coming out?
-
-Soon. This page will link to the App Store when it's ready.
