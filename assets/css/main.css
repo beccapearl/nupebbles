@@ -138,6 +138,9 @@ code {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   color: var(--ink);
   text-decoration: none;
   font-weight: 600;
@@ -147,6 +150,13 @@ code {
 }
 
 .brand:hover { color: var(--accent); }
+
+/* The three-stone mark; decorative (alt=""), so the link's name is the text beside it. */
+.brand-mark {
+  height: 1.75rem;
+  width: auto;
+  flex: none;
+}
 
 .site-footer {
   margin-top: 5rem;
