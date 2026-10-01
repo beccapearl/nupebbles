@@ -146,8 +146,9 @@ _layouts/support.html    shared contact block around each app's help text
 _layouts/faq.html        frame for each app's questions and answers
 _includes/               small shared pieces (app header, the Privacy/Support/FAQ tabs, the setup-error notice)
 assets/css/main.css      the one stylesheet
-assets/brand/            NuPebbles three-stone mark: header logo and favicon PNGs
-favicon.ico              browser-tab icon (16/32/48), made from the same artwork
+assets/brand/            NuPebbles three-stone mark: header logo and favicons (the layout links the -v2 files)
+favicon.ico              root fallback copy of assets/brand/favicon-v2.ico
+apple-touch-icon.png     180×180 icon for iPhone/iPad Safari, on the site's off-white
 index.html               landing page; lists every app in _data/apps/
 apps/<key>/privacy.md    stub: front matter only
 apps/<key>/support.md    stub + that app's help text

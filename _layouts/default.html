@@ -15,10 +15,17 @@
   <meta name="color-scheme" content="light dark">
   <meta name="referrer" content="no-referrer">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="16x16 32x32 48x48">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/brand/favicon-16.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/brand/favicon-32.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/brand/favicon-192.png' | relative_url }}">
+  {%- comment -%}
+    Versioned names (-v2) give browsers that cached the old inline oval new URLs
+    to fetch. /favicon.ico stays at the root, same image, for anything that asks
+    for it without reading these tags. The unversioned PNGs stay too, unlinked,
+    so icons already cached from them don't break.
+  {%- endcomment %}
+  <link rel="icon" href="{{ '/assets/brand/favicon-v2.ico' | relative_url }}" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/brand/favicon-16-v2.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/brand/favicon-32-v2.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/brand/favicon-192-v2.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
   {%- if site.url %}
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   {%- endif %}
