@@ -1,0 +1,29 @@
+#!/bin/sh
+# Download each released app's icon from the App Store to assets/icons/<key>.png
+# (256x256). Run monthly by .github/workflows/app-icons.yml; safe to run by hand.
+#
+# Only apps with an ios_store_url are fetched. An app without one keeps whatever
+# icon file is already there (e.g. one made by hand before release), or none.
+set -e
+cd "$(dirname "$0")/.."
+mkdir -p assets/icons
+
+for data in _data/apps/*.yml; do
+  key=$(basename "$data" .yml)
+  url=$(sed -n 's/^ios_store_url:[[:space:]]*//p' "$data")
+  id=$(printf '%s' "$url" | sed -n 's/.*id\([0-9][0-9]*\).*/\1/p')
+  if [ -z "$id" ]; then
+    echo "$key: no ios_store_url, skipped"
+    continue
+  fi
+
+  art=$(curl -fsS "https://itunes.apple.com/lookup?id=$id" | jq -r '.results[0].artworkUrl512 // empty')
+  if [ -z "$art" ]; then
+    echo "$key: no artwork found for id $id" >&2
+    exit 1
+  fi
+
+  # The listed URL ends 512x512bb.jpg; asking for 256x256bb.png gets a real PNG.
+  curl -fsS -o "assets/icons/$key.png" "$(printf '%s' "$art" | sed 's/512x512/256x256/; s/\.jpg$/.png/')"
+  echo "$key: assets/icons/$key.png"
+done

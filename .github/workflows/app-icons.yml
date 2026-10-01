@@ -1,0 +1,32 @@
+# Refresh each released app's icon from the App Store, once a month.
+# Also runs on demand: Actions tab → "App icons" → Run workflow.
+# Commits only when an icon actually changed.
+name: App icons
+
+on:
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: sh bin/fetch-app-icons
+
+      - name: Commit changed icons
+        run: |
+          git add assets/icons
+          if git diff --cached --quiet; then
+            echo "Icons unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh app icons from the App Store"
+          git push

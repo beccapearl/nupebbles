@@ -182,6 +182,20 @@ code {
 
 .eyebrow .sep { margin-inline: 0.5em; }
 
+/* App icon beside the app's name (_includes/app-icon.html) */
+.app-icon {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 22%;
+}
+
+.eyebrow--app {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 h1 {
   margin: 0;
   font-family: var(--font-ui);
@@ -323,6 +337,9 @@ h1 {
 }
 
 .card__name {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   margin: 0;
   font-family: var(--font-ui);
   font-size: 1.3rem;

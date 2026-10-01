@@ -3,7 +3,7 @@
   {% include app-header.html app=app kind="Privacy Policy" meta="Effective …" %}
 {%- endcomment -%}
 <header class="page-header">
-  <p class="eyebrow">{{ include.app.name }} <span class="sep" aria-hidden="true">·</span> {{ include.app.tagline }}</p>
+  <p class="eyebrow eyebrow--app">{% include app-icon.html app=include.app %}<span>{{ include.app.name }} <span class="sep" aria-hidden="true">·</span> {{ include.app.tagline }}</span></p>
   <h1>{{ include.kind }}</h1>
   {%- if include.meta %}
   <p class="meta">{{ include.meta }}</p>

@@ -18,7 +18,7 @@ wide: true
     {%- assign faq_page = app_pages | where: "layout", "faq" | first %}
     <li class="card" style="--app-accent: {{ app.accent | default: 'var(--rule)' }};">
       <div class="card__body">
-        <h3 class="card__name">{{ app.name }}</h3>
+        <h3 class="card__name">{% include app-icon.html app=app %}{{ app.name }}</h3>
         <p class="card__tagline">{{ app.tagline }}</p>
         <p class="card__blurb">{{ app.blurb }}</p>
       </div>

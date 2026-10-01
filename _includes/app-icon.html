@@ -1,0 +1,10 @@
+{%- comment -%}
+  An app's icon, if assets/icons/<key>.png exists; otherwise nothing.
+  {% include app-icon.html app=app %}
+  Released apps' icons are refreshed monthly by bin/fetch-app-icons.
+{%- endcomment -%}
+{%- assign icon_path = "/assets/icons/" | append: include.app.key | append: ".png" -%}
+{%- assign icon_file = site.static_files | where: "path", icon_path | first -%}
+{%- if icon_file -%}
+<img class="app-icon" src="{{ icon_path | relative_url }}" width="44" height="44" alt="">
+{%- endif -%}
