@@ -9,7 +9,7 @@ accent: "#1F3A5F"
 stores: your homes with their names, photos, listing links, and notes, your "What can I afford?" answers, your rent now, your loan on the Payoff tab, and your settings
 makes_files: true
 files_text: Only when you deliberately send it. BrightKeys makes one kind of file, a backup file with everything you saved in the app, and only when you tap “Make a backup file.” Your phone then asks where the file goes, and you pick the place. We never see it and never receive a copy.
-rights_text: You can make a backup file of it from within the app at any time. You can also delete a home, with its photo, listing link, and notes, or remove your loan on the Payoff tab. The app has no button that erases everything at once. Deleting BrightKeys from your iPhone erases everything it saved on your phone.
+rights_text: You can make a backup file of it from within the app at any time. You can also delete a home, with its photo, listing link, and notes, or remove your loan on the Payoff tab. The app has no button that erases everything at once.
 has_reminders: false
 has_purchases: true
 collects_nothing: true
