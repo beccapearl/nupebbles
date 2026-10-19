@@ -9,10 +9,14 @@ layout: default
   page's front matter) and uses these fields:
     name, stores            — dropped into the text
     makes_files             — includes "When information leaves your device"
+    files_text              — optional: this app's own words for that section,
+                              instead of "such as a backup or a PDF"
     has_reminders           — includes "Notifications"
     has_purchases           — includes the app-marketplace purchase section
     export_needs_unlock     — optional: says saving a copy needs the one-time
                               unlock, instead of "export it or erase it"
+    rights_text             — optional: this app's own words for what it can
+                              do with your data, instead of either of those
     privacy_effective_date  — optional: this app's own effective date,
                               overriding the one in _config.yml
     collects_nothing        — must be true for this shared wording to be used.
@@ -68,7 +72,7 @@ layout: default
   {%- if app.makes_files %}
 
   <h2 id="when-information-leaves-your-device">When information leaves your device</h2>
-  <p>Only when you deliberately send it. {{ app.name }} can create a file from your data — such as a backup or a PDF — but only when you ask it to. The file is handed to your device’s own share sheet, and from there you decide what happens to it: where it is saved, whether it is printed, who it goes to. We never see it and never receive a copy.</p>
+  <p>{% if app.files_text %}{{ app.files_text }}{% else %}Only when you deliberately send it. {{ app.name }} can create a file from your data — such as a backup or a PDF — but only when you ask it to. The file is handed to your device’s own share sheet, and from there you decide what happens to it: where it is saved, whether it is printed, who it goes to. We never see it and never receive a copy.{% endif %}</p>
   {%- endif %}
 
   {%- if app.has_reminders %}
@@ -84,7 +88,7 @@ layout: default
   <p>{{ app.name }} may be used by people of different ages. Because the app does not collect personal information, it does not collect personal information from children.</p>
 
   <h2 id="your-rights">Your rights over your data</h2>
-  <p>Your app data is already in your hands. {% if app.export_needs_unlock %}You can erase it from within the app at any time. With the one-time unlock, you can also save a copy through your device’s share sheet.{% else %}You can {% if app.makes_files %}export it or {% endif %}erase it from within the app at any time.{% endif %} Removing the app removes its local data from your device; any device backup you chose to make remains subject to your device and backup provider’s controls. NuPebbles has no server copy to return, correct, or delete.</p>
+  <p>Your app data is already in your hands. {% if app.rights_text %}{{ app.rights_text }}{% elsif app.export_needs_unlock %}You can erase it from within the app at any time. With the one-time unlock, you can also save a copy through your device’s share sheet.{% else %}You can {% if app.makes_files %}export it or {% endif %}erase it from within the app at any time.{% endif %} Removing the app removes its local data from your device; any device backup you chose to make remains subject to your device and backup provider’s controls. NuPebbles has no server copy to return, correct, or delete.</p>
 
 {%- else %}
 

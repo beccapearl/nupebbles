@@ -10,7 +10,7 @@ No. Parts of BrightKeys are free, and one payment unlocks the full app for good.
 
 ## Do I need an account?
 
-No. Everything stays on your phone.
+No. The app keeps everything on your phone.
 
 ## Are the numbers exact?
 
@@ -18,7 +18,7 @@ No. They're estimates from the numbers you enter. BrightKeys is not a lender and
 
 ## Does BrightKeys go online to get rates?
 
-No. You type in the numbers. Where a number comes from an official source, a row opens that source page so you can check it yourself, and the row says where it goes.
+No. You type in the numbers. For some numbers you don't know, like property taxes or home insurance, the app uses an average saved in the app. Where a number comes from an official source, a row opens that source page so you can check it yourself, and the row says where it goes.
 
 ## Does it work without internet?
 

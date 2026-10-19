@@ -28,4 +28,4 @@ On your old phone, go to **More > Back up your data** and tap **Make a backup fi
 
 ## Your data
 
-Everything stays on your phone. There's no account, and nothing is sent to us.
+The app keeps everything on your phone. There's no account, and nothing is sent to us.
