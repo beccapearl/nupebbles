@@ -3,13 +3,13 @@
 key: brightkeys
 name: BrightKeys
 tagline: The honest home-buying app
-blurb: Know what a home may really cost you before you make an offer. BrightKeys counts taxes, insurance, and upkeep, gives a plain answer with the reasons why, and shows what would change it. No ads, no account, and everything stays on your phone.
+blurb: Know what a home may really cost you before you make an offer. BrightKeys counts taxes, insurance, and upkeep, gives a plain answer with the reasons why, and shows what would change it. No ads, no account, and the app keeps everything on your phone.
 ios_store_url:
 accent: "#1F3A5F"
 stores: your homes with their names, photos, listing links, and notes, your "What can I afford?" answers, your rent now, your loan on the Payoff tab, and your settings
 makes_files: true
 files_text: Only when you deliberately send it. BrightKeys makes one kind of file, a backup file with everything you saved in the app, and only when you tap “Make a backup file.” Your phone then asks where the file goes, and you pick the place. We never see it and never receive a copy.
-rights_text: You can make a backup file of it from within the app at any time. You can also delete a home, with its photo, listing link, and notes, or remove your loan on the Payoff tab. The app has no button that erases everything at once.
+rights_text: You can make a backup file of it from within the app at any time. You can also delete a home, with its photo, listing link, and notes, or remove your loan on the Payoff tab. The app has no button that erases everything at once. Deleting BrightKeys from your iPhone erases everything it saved on your phone.
 has_reminders: false
 has_purchases: true
 collects_nothing: true
