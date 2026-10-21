@@ -9,8 +9,9 @@ android_store_url:
 accent: "#5E7EB8"
 stores: your rooms, cleaning tasks and schedules, helper names, and settings
 makes_files: true
+files_text: Only when you deliberately send it. BrightKeep makes one kind of file, a copy of your home for backup, and only when you tap “Save a copy.” The file is handed to your device’s own share sheet, and from there you decide where it is saved and who it goes to. We never see it and never receive a copy.
 has_reminders: true
 has_purchases: true
 collects_nothing: true
 export_needs_unlock: true
-privacy_effective_date: 2026-10-01
+privacy_effective_date: 2026-10-21
