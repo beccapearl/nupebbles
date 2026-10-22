@@ -13,6 +13,7 @@ layout: default
                               instead of "such as a backup or a PDF"
     has_reminders           — includes "Notifications"
     has_purchases           — includes the app-marketplace purchase section
+    reads_pictures          — includes "Camera, photos, and text files"
     export_needs_unlock     — optional: says saving a copy needs the one-time
                               unlock, instead of "export it or erase it"
     rights_text             — optional: this app's own words for what it can
@@ -57,6 +58,13 @@ layout: default
   <h2 id="what-the-app-stores">What the app stores, and where</h2>
   <p>Everything you enter — {{ app.stores }} — is saved in the app’s own private storage on your device. It is not transmitted anywhere.</p>
   <p>If you back up your device, that data is included in the backup, as it is for any other app. Those are backups you have chosen to make, they are governed by your device manufacturer’s terms, and they are not something we can see or control.</p>
+
+  {%- if app.reads_pictures %}
+
+  <h2 id="camera-photos-text-files">Camera, photos, and text files</h2>
+  <p>{{ app.name }} can turn a page of words into a word list. Scan a page uses your device’s camera, Choose a photo opens your device’s photo picker, and Open a text file opens your device’s file picker. {{ app.name }} asks for camera access only when you choose Scan a page. It never asks for access to your photo library, because the picker shares only the one photo you choose.</p>
+  <p>The picture or file is read on your device to find the words. It is not uploaded, not sent to NuPebbles, and not saved by the app. Only the words are kept, and they are stored with your other entries as described above.</p>
+  {%- endif %}
 
   {%- if app.has_purchases %}
 
