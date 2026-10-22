@@ -40,11 +40,11 @@ BrightWren has no BrightWren account, ads, tracking, or third-party analytics. L
 
 BrightWren keeps everything on your device and nowhere else. There is no account and no cloud backup, which is why we collect nothing about you. It also means deleting the app deletes your record permanently, and we cannot restore it.
 
-Use Settings → Keep a copy in Files from time to time, especially at the end of a term, and before deleting the app or moving to a new device.
+Use Settings → Records → Keep a copy → Save a copy of the record from time to time, especially at the end of a term, and before deleting the app or moving to a new device.
 
 ## How do I move everything to a new device?
 
-On the old device: Settings → Keep a copy in Files, and save the file somewhere you can reach it again. On the new one: Settings → Restore from a copy, and choose that file.
+On the old device: Settings → Records → Keep a copy → Save a copy of the record, and save the file somewhere you can reach it again. On the new one: Settings → Restore from a copy, and choose that file.
 
 Restoring adds the learners from the file. It never overwrites or removes anything already on the device — so if you restore the same file twice, you will see each learner twice. Delete the extra profile to put it right.
 
