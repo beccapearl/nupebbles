@@ -62,7 +62,7 @@ layout: default
   {%- if app.reads_pictures %}
 
   <h2 id="camera-photos-text-files">Camera, photos, and text files</h2>
-  <p>{{ app.name }} can turn a page of words into a word list. Scan a page uses your device’s camera, Choose a photo opens your device’s photo picker, and Open a text file opens your device’s file picker. {{ app.name }} asks for camera access only when you choose Scan a page. It never asks for access to your photo library, because the picker shares only the one photo you choose.</p>
+  <p>{{ app.name }} can turn a page of words into a word list. Scan a page uses your device’s camera, Choose a photo opens your device’s photo picker, and Open a text file opens your device’s file picker. The camera is used only for Scan a page. Your device asks whether to allow it, and you can change that anytime in your device’s settings. {{ app.name }} never asks for access to your photo library, because the picker shares only the one photo you choose.</p>
   <p>The picture or file is read on your device to find the words. It is not uploaded, not sent to NuPebbles, and not saved by the app. Only the words are kept, and they are stored with your other entries as described above.</p>
   {%- endif %}
 
