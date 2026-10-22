@@ -10,7 +10,7 @@ No, BrightWren holds 47 lists and 540 words. A conventional spelling program cov
 
 ## Why does the app ask me to write sentences on paper?
 
-Writing a dictated sentence gives learners a way to practice the word in context and check their own work. It is optional; **Type it again** and **Words only** are also available.
+Writing a dictated sentence gives learners a way to practice the word in context and check their own work. It is optional. Choose **On paper**, **Type it again**, or **Words only** in **Settings → Learning**.
 
 ## What is Words to Meet Again?
 
@@ -18,7 +18,7 @@ When a word is missed, it is added to **Words to Meet Again**. The learner can p
 
 ## Can I practice a school spelling list?
 
-Yes, with the full version. Create a custom list by typing words or choosing words from the built-in groups, then practice or assess it like other lists.
+Yes, with the full version. Tap **Make a list** on Home, then use **Scan a page**, **Choose a photo**, or **Open a text file**, or type or paste the words. Each list holds up to 25 words, and a longer list is saved as several shorter lists in a group. Practice or assess it like any other list.
 
 ## How do assessments work?
 
@@ -30,11 +30,11 @@ Yes. BrightWren uses your device’s installed voices. Open **Settings → Voice
 
 ## Do I need an internet connection?
 
-Spelling practice and locally stored records work offline once the app and a device voice are available. Buying or restoring the full version requires a connection to your device’s app marketplace. Downloading an additional system voice may also require a connection.
+Spelling practice, scanning a page, and locally stored records work offline once the app and a device voice are available. Buying or restoring the full version requires a connection to your device’s app marketplace. Downloading an additional system voice may also require a connection.
 
 ## Is learner data private?
 
-BrightWren has no BrightWren account, ads, tracking, or third-party analytics. Learner names, lists, results, and records stay on the device and are not sent to NuPebbles. The app connects to your device’s app marketplace only to check, buy, or restore the full version.
+BrightWren has no BrightWren account, ads, tracking, or third-party analytics. Learner names, lists, results, and records stay on the device and are not sent to NuPebbles. Photos, scans, and text files are read on the device, and only the words are kept. The app connects to your device’s app marketplace only to check, buy, or restore the full version.
 
 ## What happens if I delete the app?
 
