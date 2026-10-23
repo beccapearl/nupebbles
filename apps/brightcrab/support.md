@@ -34,4 +34,4 @@ After your move, BrightCrab asks you in the app whether to archive it.
 
 ## Resetting the app
 
-**Reset all data** removes every move and all related tasks, boxes, photos, budget items, notes, contacts, and settings stored by BrightCrab. This cannot be undone unless you previously saved a backup.
+**Reset all data** removes every move and all related tasks, boxes, photos, budget items, notes, and contacts stored by BrightCrab. Your appearance, text size, and animation settings are kept. This cannot be undone unless you previously saved a backup.
