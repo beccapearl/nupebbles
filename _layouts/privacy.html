@@ -8,6 +8,8 @@ layout: default
   It reads the app's file in _data/apps/ (matched by the "app:" key in the
   page's front matter) and uses these fields:
     name, stores            — dropped into the text
+    stores_text             — optional: this app's own sentence, added to the
+                              end of "What the app stores, and where"
     makes_files             — includes "When information leaves your device"
     files_text              — optional: this app's own words for that section,
                               instead of "such as a backup or a PDF"
@@ -56,7 +58,7 @@ layout: default
   </ul>
 
   <h2 id="what-the-app-stores">What the app stores, and where</h2>
-  <p>Everything you enter — {{ app.stores }} — is saved in the app’s own private storage on your device. It is not transmitted anywhere. Your data stays on your device until you delete it in the app or delete the app.</p>
+  <p>Everything you enter — {{ app.stores }} — is saved in the app’s own private storage on your device. It is not transmitted anywhere.{% if app.stores_text %} {{ app.stores_text }}{% endif %}</p>
   <p>If you back up your device, that data is included in the backup, as it is for any other app. Those are backups you have chosen to make, they are governed by your device manufacturer’s terms, and they are not something we can see or control.</p>
 
   {%- if app.reads_pictures %}

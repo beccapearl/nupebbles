@@ -13,3 +13,5 @@ makes_files: true
 has_reminders: true
 has_purchases: true
 collects_nothing: true
+stores_text: Your data stays on your device until you delete it in the app or delete the app.
+privacy_effective_date: 2026-10-23
