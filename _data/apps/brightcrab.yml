@@ -13,3 +13,4 @@ makes_files: true
 has_reminders: false
 has_purchases: true
 collects_nothing: true
+privacy_effective_date: 2026-10-22
