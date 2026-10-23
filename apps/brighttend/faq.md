@@ -10,7 +10,7 @@ No. There is nothing to sign up for and nothing to sign in to.
 
 ## Does it work offline?
 
-Yes, always. BrightTend never uses the network, so there is no difference between online and offline.
+Yes. Everything works offline. Only buying or restoring BrightTend Lifetime needs a connection to the App Store.
 
 ## Where is my writing stored?
 

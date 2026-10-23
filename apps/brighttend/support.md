@@ -33,3 +33,11 @@ On the new phone, tap **Restore a backup** on the first screen, or use **Restore
 The evening reminder starts on and arrives at your evening hour. The morning reminder starts off. You can turn either reminder on or off in Settings.
 
 BrightTend offers five text sizes of its own, applied on top of your device's text size setting — so if the system size is already right for you, you can still make BrightTend a little larger or smaller.
+
+## Buying, restoring and refunds
+
+BrightTend Lifetime is a one-time purchase, not a subscription.
+
+To get it back on a new phone or after reinstalling, go to **Settings → BrightTend Lifetime → Unlimited actions and PDF exports** and tap **Restore Purchases** while signed in with the same Apple Account.
+
+Apple handles all payments and refunds. To request a refund, go to [reportaproblem.apple.com](https://reportaproblem.apple.com).
