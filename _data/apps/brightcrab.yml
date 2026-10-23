@@ -10,6 +10,6 @@ accent: "#DE3F18"
 stores: your move details, checklist tasks, boxes and photos, budget items,
   notes, contacts, archived moves, and settings
 makes_files: true
-has_reminders: true
+has_reminders: false
 has_purchases: true
 collects_nothing: true

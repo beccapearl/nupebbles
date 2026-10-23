@@ -36,9 +36,9 @@ No. **Restore Purchases** asks your device’s app marketplace to restore the on
 
 Yes. **Export to PDF** creates a move manifest from the sections you select. Your device then lets you print, save, or share it.
 
-## Are notifications sent through a server?
+## Does BrightCrab send notifications?
 
-No. BrightCrab schedules its archive prompt locally on your device. There is no NuPebbles push-notification server.
+No. BrightCrab doesn't send notifications. After your move, it asks you in the app whether to archive the move.
 
 ## Is there a subscription?
 

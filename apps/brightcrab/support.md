@@ -28,7 +28,7 @@ The one-time purchase is restored separately. Open the side menu and choose **Re
 
 Choose **Export to PDF** to create a move manifest from the sections you select. The PDF is made on your device, then the system share sheet lets you print, save, or send it. BrightCrab never receives a copy.
 
-## Local notifications
+## After your move
 
 After your move, BrightCrab asks you in the app whether to archive it.
 
