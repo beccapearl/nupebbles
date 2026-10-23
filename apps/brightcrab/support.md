@@ -30,7 +30,7 @@ Choose **Export to PDF** to create a move manifest from the sections you select.
 
 ## Local notifications
 
-BrightCrab can schedule a local prompt after a move so you can decide whether to archive it. Notification handling stays on your device; NuPebbles does not run a push-notification server.
+After your move, BrightCrab asks you in the app whether to archive it.
 
 ## Resetting the app
 
