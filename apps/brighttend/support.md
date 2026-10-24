@@ -16,6 +16,10 @@ You can change today's answers and note until midnight. Past days are kept as th
 
 In the morning check-in, **Record now instead** lets you answer straight away rather than waiting for the evening, and **Leave it for this evening** keeps the day open until then.
 
+## Finding a note
+
+In History, type in **Search your notes** to find any day's note, then tap a result to see that day. The search field appears once you've written at least one note.
+
 ## Archiving versus deleting
 
 **Archive** an action when you're done with it but want to keep what you recorded. Its history and its color stay.
@@ -28,9 +32,17 @@ On the old phone, go to **Settings → Your data → Save a backup** and keep th
 
 On the new phone, tap **Restore a backup** on the first screen, or use **Restore from a backup** in **Settings → Your data**. BrightTend checks that the file is a valid backup before it changes anything, so a wrong file can't damage what's already there.
 
+Under **Save a backup**, BrightTend shows when you last saved one. If it's been about a month, a short note on Today offers to save a new one.
+
+## A readable copy
+
+**Settings → Your data → Save as plain text** creates a text file of your actions, answers and notes that opens anywhere. It can't be restored. To move your data to a new phone, use **Save a backup**.
+
 ## Reminders and text size
 
 The evening reminder starts on and arrives at your evening hour. The morning reminder starts off. You can turn either reminder on or off in Settings.
+
+If you haven't opened BrightTend for a few days, reminders space themselves out and stop after four weeks. Opening the app brings them back to daily.
 
 BrightTend offers five text sizes of its own, applied on top of your device's text size setting — so if the system size is already right for you, you can still make BrightTend a little larger or smaller.
 
