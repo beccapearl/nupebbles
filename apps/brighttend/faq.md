@@ -22,7 +22,7 @@ A streak turns one missed day into a reason to stop. A day you answered *Not tod
 
 ## What happens if I miss a day?
 
-Nothing. The day stays blank, and the line in History breaks there. Fill it in whenever you like — or don't.
+Nothing. The day stays blank, and the line in History breaks there. Past days can't be filled in later, so there's nothing to catch up on.
 
 ## Why does a line skip some days without breaking?
 
@@ -38,7 +38,7 @@ Yes. Choose **Save this month as PDF**, and the PDF goes to your device's share 
 
 ## How do I change an answer?
 
-Tap the answer again to clear it, or tap a different one. This works for past days too.
+Tap the answer again to clear it, or tap a different one. You can change today's answers and note until midnight.
 
 ## How do I delete everything?
 

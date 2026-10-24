@@ -12,7 +12,7 @@ Go to **Settings → Your actions → Add an action**. Give it a name, choose th
 
 Each day, an action has three possible answers: **Did it**, **Some of it**, or **Not today**. Tap one to record it. Tap it again to clear it, or tap a different answer to change it.
 
-Anything can be changed later, including past days — nothing is locked in.
+You can change today's answers and note until midnight. Past days are kept as they were recorded.
 
 In the morning check-in, **Record now instead** lets you answer straight away rather than waiting for the evening, and **Leave it for this evening** keeps the day open until then.
 
