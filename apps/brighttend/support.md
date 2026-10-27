@@ -38,6 +38,8 @@ Under **Save a backup**, BrightTend shows when you last saved one. If it's been 
 
 **Settings → Your data → Save as plain text** creates a text file of your actions, answers and notes that opens anywhere. It can't be restored. To move your data to a new phone, use **Save a backup**.
 
+If tapping the file opens a different app instead of showing the text, press and hold the file in the Files app and choose Quick Look. The file is fine — iPhone sends text files to whichever app has asked to open them.
+
 ## Reminders and text size
 
 The evening reminder starts on and arrives at your evening hour. The morning reminder starts off. You can turn either reminder on or off in Settings.

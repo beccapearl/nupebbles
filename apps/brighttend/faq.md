@@ -26,7 +26,7 @@ Nothing. The day stays blank, and the line in History breaks there. Past days ca
 
 ## Why does a line skip some days without breaking?
 
-Those days were never part of that action — they weren't among the weekdays you chose for it. A break means a day you meant to record and didn't.
+Those days were never part of that action — they weren't among the weekdays you chose for it. A break means a day with nothing recorded.
 
 ## How many actions should I have?
 
@@ -34,7 +34,7 @@ Three is usually enough.
 
 ## Can I print a month?
 
-Yes. Choose **Save this month as PDF**, and the PDF goes to your device's share sheet, where you can print it or save it.
+Yes, with BrightTend Lifetime. In History, choose **Save as PDF**, pick one month or many, and BrightTend shows how many pages it will be before you save. The PDF goes to your device's share sheet, where you can print it or save it.
 
 ## How do I change an answer?
 
@@ -42,7 +42,7 @@ Tap the answer again to clear it, or tap a different one. You can change today's
 
 ## How do I delete everything?
 
-**Settings → Privacy → Delete everything.** This cannot be undone. Deleting the app also removes everything it stored, so save a backup first if you might want it back.
+**Settings → Help & privacy → Delete everything.** This cannot be undone. Deleting the app also removes everything it stored, so save a backup first if you might want it back.
 
 ## Is there a subscription?
 
