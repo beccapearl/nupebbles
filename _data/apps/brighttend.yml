@@ -7,6 +7,8 @@ blurb: Gentle daily check-ins for the actions that matter, with notes, history, 
 ios_store_url: https://apps.apple.com/us/app/brighttend-daily-check-in/id6811962564
 android_store_url:
 accent: "#2F6F5C"
+# New icon (sun fully above the line), under a new name so browsers fetch it.
+icon: brighttend-v2
 stores: the actions you create, the answers you give each day, the notes you
   write, and your settings
 makes_files: true
