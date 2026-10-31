@@ -6,7 +6,7 @@ title: Privacy Policy
 
 ## Links you tap
 
-Some rows in BrightKeys open an official source page, from a government agency, Fannie Mae, or Freddie Mac, and each row says where it goes. If you add a listing link to a home, "View listing" opens that page. Pages open only when you tap. Your phone sends the request to that site, as it does for any link you tap, and that site's own privacy policy applies. Nothing else from the app goes with it.
+Some rows in BrightKeys open an official source page, from a government agency, Fannie Mae, or Freddie Mac, and each row says where it goes. If you add a listing link to a home, "View listing" opens that page. The "Privacy policy" and "Support" rows on More open BrightKeys' pages on this site, nupebbles.com. Pages open only when you tap. Your phone sends the request to that site, as it does for any link you tap, and that site's own privacy policy applies. Nothing else from the app goes with it.
 
 ## A home's photo
 

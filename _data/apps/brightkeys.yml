@@ -2,7 +2,7 @@
 # "app:" value in that folder's privacy, support, and FAQ pages.
 key: brightkeys
 name: BrightKeys
-tagline: The honest home-buying app
+tagline: See what each home may cost
 blurb: Know what a home may really cost you before you make an offer. BrightKeys counts taxes, insurance, and upkeep, gives a plain answer with the reasons why, and shows what would change it. No ads, no account, and the app keeps everything on your phone.
 ios_store_url:
 accent: "#1F3A5F"
@@ -14,4 +14,4 @@ has_reminders: false
 has_purchases: true
 collects_nothing: true
 export_needs_unlock: false
-privacy_effective_date: 2026-10-15
+privacy_effective_date: 2026-10-31
