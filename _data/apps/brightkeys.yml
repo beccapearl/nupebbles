@@ -1,6 +1,8 @@
 # The filename is this app's key. It must match apps/brightkeys/ and the
 # "app:" value in that folder's privacy, support, and FAQ pages.
 key: brightkeys
+# Off the landing page; its privacy, support, and FAQ pages stay live, unlinked.
+listed: false
 name: BrightKeys
 tagline: See what each home may cost
 blurb: Monthly costs, mortgage payoff, rate strategies, and home comparisons before you make an offer.
